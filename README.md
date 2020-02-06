@@ -1,7 +1,7 @@
 # original
 https://github.com/leoChaoGlut/ambari-azkaban-service 
-Thanks to [leo]https://github.com/leoChaoGlut/
-# Author: [jzyhappy]https://github.com/jzyhappy/
+Thanks to [leo](https://github.com/leoChaoGlut/)
+# Author: [jzyhappy](https://github.com/jzyhappy/)
 
 # Building from Source
 Azkaban builds use Gradle (downloads automatically when run using gradlew which is the Gradle wrapper) and requires Java 8 or higher.
