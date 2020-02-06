@@ -87,11 +87,11 @@
     <!--    # mail settings-->
     <property>
         <name>mail.sender</name>
-        <value></value>
+        <value>jzy@secemail.cn</value>
     </property>
     <property>
         <name>mail.host</name>
-        <value></value>
+        <value>mail.secemail.cn</value>
     </property>
     <!--    # User facing web server configurations used to construct the user facing server URLs. They are useful when there is a reverse proxy between Azkaban web servers and users.-->
     <!--    # enduser -> myazkabanhost:443 -> proxy -> localhost:8081-->
@@ -102,11 +102,11 @@
     <!--    # azkaban.webserver.external_port=8081-->
     <property>
         <name>job.failure.email</name>
-        <value></value>
+        <value>1003149427@qq.com</value>
     </property>
     <property>
         <name>job.success.email</name>
-        <value></value>
+        <value>1003149427@qq.com</value>
     </property>
     <property>
         <name>lockdown.create.projects</name>
@@ -141,7 +141,7 @@
     </property>
     <property>
         <name>mysql.host</name>
-        <value>hdp00</value>
+        <value>landrover-28</value>
     </property>
     <property>
         <name>mysql.database</name>
@@ -149,11 +149,11 @@
     </property>
     <property>
         <name>mysql.user</name>
-        <value>root</value>
+        <value>azkaban</value>
     </property>
     <property>
         <name>mysql.password</name>
-        <value>1</value>
+        <value>azkaban</value>
     </property>
     <property>
         <name>mysql.numconnections</name>
