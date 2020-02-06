@@ -23,7 +23,7 @@
     </property>
     <property>
         <name>mysql.host</name>
-        <value>fp-bd5</value>
+        <value>landrover-28</value>
     </property>
     <property>
         <name>mysql.port</name>
