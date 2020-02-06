@@ -82,7 +82,7 @@
     <!--    # Azkaban Executor settings-->
     <property>
         <name>azkaban.webserver.url</name>
-        <value>http://hdp00:10200</value>
+        <value>http://landrover-28:10200</value>
     </property>
     <!--    # mail settings-->
     <property>
