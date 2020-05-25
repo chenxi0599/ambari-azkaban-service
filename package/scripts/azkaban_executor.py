@@ -48,9 +48,15 @@ class ExecutorServer(Script):
         from params import azkaban_executor_properties
         self.configure(env)
         Execute('cd {0} && bin/azkaban-executor-start.sh'.format(AZKABAN_HOME))
+        from resource_management.core import sudo
+        port = str(sudo.read_file(AZKABAN_HOME + '/executor.port'))
         Execute(
-            'curl http://localhost:{0}/executor?action=activate'.format(azkaban_executor_properties['executor.port'])
+            'curl http://landrover-28:{0}/executor?action=activate'.format(port)
         )
+#         Execute(
+#             'curl http://localhost:{0}/executor?action=activate'.format(azkaban_executor_properties['executor.port'])
+#         )
+
 
     def status(self, env):
         try:
