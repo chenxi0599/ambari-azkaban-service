@@ -51,7 +51,7 @@ class ExecutorServer(Script):
         from resource_management.core import sudo
         port = str(sudo.read_file(AZKABAN_HOME + '/executor.port'))
         Execute(
-            'curl http://landrover-28:{0}/executor?action=activate'.format(port)
+            'curl http://localhost:{0}/executor?action=activate'.format(port)
         )
 #         Execute(
 #             'curl http://localhost:{0}/executor?action=activate'.format(azkaban_executor_properties['executor.port'])
