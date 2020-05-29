@@ -79,7 +79,7 @@ class ExecutorServer(Script):
             for key, value in azkaban_executor_properties.iteritems():
                 if key != 'content':
                     f.write(key_val_template.format(key, value))
-            f.write(azkaban_executor_properties['content'])
+            #f.write(azkaban_executor_properties['content'])
 
         with open(path.join(AZKABAN_CONF, 'log4j.properties'), 'w') as f:
             f.write(log4j_properties['content'])
