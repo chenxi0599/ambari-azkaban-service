@@ -80,7 +80,7 @@ class WebServer(Script):
             for key, value in azkaban_web_properties.iteritems():
                 if key != 'content':
                     f.write(key_val_template.format(key, value))
-            f.write(str(azkaban_web_properties['content']))
+            #f.write(str(azkaban_web_properties['content']))
 
         with open(path.join(AZKABAN_CONF, 'azkaban-users.xml'), 'w') as f:
             f.write(str(azkaban_users['content']))
