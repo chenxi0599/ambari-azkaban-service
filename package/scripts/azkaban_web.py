@@ -53,13 +53,15 @@ class WebServer(Script):
         self.configure(env)
 
     def stop(self, env):
-        Execute('cd {0} && bin/azkaban-web-shutdown.sh'.format(AZKABAN_HOME))
+        self.configure(env)
+        Execute('cd {0} && bin/shutdown-web.sh'.format(AZKABAN_HOME))
 
     def start(self, env):
         self.configure(env)
-        Execute('cd {0} && bin/azkaban-web-start.sh'.format(AZKABAN_HOME))
+        Execute('cd {0} && bin/start-web.sh'.format(AZKABAN_HOME))
 
     def status(self, env):
+        self.configure(env)
         try:
             Execute(
                 'export AZ_CNT=`ps -ef |grep -v grep |grep azkaban-web-server | wc -l` && `if [ $AZ_CNT -ne 0 ];then exit 0;else exit 3;fi `'
@@ -80,7 +82,7 @@ class WebServer(Script):
             for key, value in azkaban_web_properties.iteritems():
                 if key != 'content':
                     f.write(key_val_template.format(key, value))
-            #f.write(str(azkaban_web_properties['content']))
+#            f.write(str(azkaban_web_properties['content']))
 
         with open(path.join(AZKABAN_CONF, 'azkaban-users.xml'), 'w') as f:
             f.write(str(azkaban_users['content']))

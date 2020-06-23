@@ -19,12 +19,16 @@
 
     <!--    # Azkaban Personalization Settings-->
     <property>
+        <name>java_home</name>
+        <value>/opt/jdk/jdk1.8.0_201</value>
+    </property>
+    <property>
         <name>azkaban.name</name>
-        <value>azkb</value>
+        <value>azkaban</value>
     </property>
     <property>
         <name>azkaban.label</name>
-        <value>prod</value>
+        <value>test</value>
     </property>
     <property>
         <name>azkaban.color</name>
@@ -172,5 +176,29 @@
         <name>executor.port</name>
         <value>12321</value>
     </property>
-
+     <!--    #Multiple Executor-->
+    <property>
+        <name>azkaban.use.multiple.executors</name>
+        <value>true</value>
+    </property>
+    <property>
+        <name>azkaban.executorselector.filters</name>
+        <value>StaticRemainingFlowSize,MinimumFreeMemory,CpuStatus</value>
+    </property>
+    <property>
+        <name>azkaban.executorselector.comparator.NumberOfAssignedFlowComparator</name>
+        <value>1</value>
+    </property>
+    <property>
+        <name>azkaban.executorselector.comparator.Memory</name>
+        <value>1</value>
+    </property>
+    <property>
+        <name>azkaban.executorselector.comparator.LastDispatched</name>
+        <value>1</value>
+    </property>
+    <property>
+        <name>azkaban.executorselector.comparator.CpuUsage</name>
+        <value>1</value>
+    </property>
 </configuration>
