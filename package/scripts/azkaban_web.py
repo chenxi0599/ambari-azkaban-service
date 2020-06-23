@@ -61,7 +61,7 @@ class WebServer(Script):
         Execute('cd {0} && bin/start-web.sh'.format(AZKABAN_HOME))
 
     def status(self, env):
-        self.configure(env)
+        #self.configure(env)
         try:
             Execute(
                 'export AZ_CNT=`ps -ef |grep -v grep |grep azkaban-web-server | wc -l` && `if [ $AZ_CNT -ne 0 ];then exit 0;else exit 3;fi `'
